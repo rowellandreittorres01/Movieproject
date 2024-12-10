@@ -1,0 +1,129 @@
+.main-containerr {
+  padding: 20px;
+  color: #fff;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.page-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #0ef;
+  text-shadow: 0 0 10px #0ef, 0 0 20px rgba(0, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: -25px 0;
+  text-align: justify;
+  margin-left: 600px;
+}
+
+.featured-list-container {
+  width: 84.4%;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 30px auto;
+  background: linear-gradient(145deg, rgba(0, 255, 255, 0.2), rgba(0, 50, 50, 0.8));
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.7);
+}
+
+.featured-backdrop {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  background-size: cover;
+}
+
+.featured-movie-title {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 10px 20px;
+  position: absolute;
+  top: 480px;
+  left: 15px;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  color: #0ef;
+  text-shadow: 0 0 10px #0ef, 0 0 20px rgba(0, 255, 255, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: inset 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.MovieCards {
+  height: 300px;
+  background: linear-gradient(135deg, rgba(0, 0, 30, 0.8), rgba(0, 50, 50, 0.9));
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.MovieCards:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 15px #0ef, 0 0 30px rgba(0, 255, 255, 0.7);
+}
+
+.MovieCards::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 255, 255, 0.2);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.MovieCards:hover::after {
+  opacity: 1;
+}
+
+/* Neon Animation */
+@keyframes neon-glow {
+  0% {
+    box-shadow: 0 0 10px #0ef, 0 0 20px #0ef;
+  }
+  100% {
+    box-shadow: 0 0 20px #0ef, 0 0 40px rgba(0, 255, 255, 0.7);
+  }
+}
+
+.featured-list-container,
+.MovieCards {
+  animation: neon-glow 3s infinite alternate;
+}

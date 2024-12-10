@@ -1,0 +1,125 @@
+.Register {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)), url(bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .main-container {
+    width: 360px;
+    padding: 2.5rem;
+    background: rgba(18, 18, 28, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px #6b36ff, 0 0 60px #6b36ff;
+    animation: glowPulse 3s infinite alternate;
+  }
+  
+  .main-container h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 8px #6b36ff, 0 0 15px #6b36ff;
+    text-align: center;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .form-group input:focus {
+    border: 2px solid #6b36ff;
+    box-shadow: 0 0 10px #6b36ff, 0 0 20px #6b36ff;
+  }
+  
+  .btn-primary {
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #6b36ff, #9c27e8);
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px #6b36ff, 0 0 30px #6b36ff;
+  }
+  
+  .btn-primary:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #9c27e8, #6b36ff);
+    box-shadow: 0 0 20px #9c27e8, 0 0 40px #9c27e8;
+  }
+  
+  .register-container {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .register-container a {
+    color: #9c27e8;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px #9c27e8;
+  }
+  
+  .register-container a:hover {
+    color: #6b36ff;
+    text-shadow: 0 0 10px #6b36ff, 0 0 20px #6b36ff;
+  }
+  
+  @keyframes glowPulse {
+    from {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px #6b36ff, 0 0 60px #6b36ff;
+    }
+    to {
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2), 0 0 50px #9c27e8, 0 0 70px #9c27e8;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-container {
+      width: 90%;
+      padding: 1.5rem;
+    }
+  
+    .main-container h3 {
+      font-size: 1.8rem;
+    }
+  }
