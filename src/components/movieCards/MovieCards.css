@@ -1,0 +1,46 @@
+.card-cast-data, .card-movie {
+  max-width: 181px;
+  border: 4px solid rgba(0, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  color: #0ff;
+  text-align: center;
+  box-shadow: 0 0 15px 3px rgba(0, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  font-weight: bolder;
+}
+
+.card-cast-data img, .card-movie img {
+  max-width: 181px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+}
+
+.card-cast-data:hover, .card-movie:hover {
+  border-color: #00cccc;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #fff;
+  box-shadow: 0 0 20px #00cccc;
+}
+
+.spacing-cast-card {
+  margin: 8px 0;
+}
+
+.cast-characterName-card {
+  font-size: 12pt;
+  color: #0ff;
+  text-shadow: 0 0 4px #0ff;
+}
+
+@media (max-width: 500px) {
+  .card-cast-data img, .card-movie img {
+      max-width: 118px;
+  }
+
+  .card-cast-data, .card-movie {
+      max-width: 118px;
+      font-size: 8pt;
+  }
+}
